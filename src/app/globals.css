@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -24,4 +24,50 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+} */
+
+#btn1,
+#btn2 {
+  border-radius: 8px;
+  border: 1px solid var(--neutral-50, #2a2a2a);
+  padding: 10px;
+  width: 234px;
+  flex: 1;
+  color: var(--neutral-50, #2A2A2A);
+font-feature-settings: 'cv04' on, 'cv03' on;
+
+/* Paragraph/Medium/Medium */
+font-family: Inter;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: 145%; /* 20.3px */
+}
+
+.card {
+  column-gap: 16px;
+  border-radius: 8px;
+  border: 0.5px solid var(--neutral-10, #ccc);
+  background: #fff;
+  padding: 32px 10px 26px 24px;
+  height: fit-content;
+}
+
+.btn-wrapper {
+  column-gap: 16px;
+}
+
+.center {
+  row-gap: 16px;
+}
+
+#btn2 {
+  background-color: #121212;
+  color: white;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
 }
