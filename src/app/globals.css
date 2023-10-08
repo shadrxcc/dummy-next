@@ -16,7 +16,7 @@
   }
 }
 
-body {
+/* body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -26,22 +26,30 @@ body {
     rgb(var(--background-start-rgb));
 } */
 
+body {
+  overflow-x: hidden;
+}
+
 #btn1,
 #btn2 {
+  display: flex;
+  width: 234px;
+  height: 40px;
+  padding: 14.5px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
   border-radius: 8px;
   border: 1px solid var(--neutral-50, #2a2a2a);
-  padding: 10px;
-  width: 234px;
-  flex: 1;
-  color: var(--neutral-50, #2A2A2A);
-font-feature-settings: 'cv04' on, 'cv03' on;
+  color: var(--neutral-0, var(--White, #fff));
+  font-feature-settings: "cv04" on, "cv03" on;
 
-/* Paragraph/Medium/Medium */
-font-family: Inter;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 145%; /* 20.3px */
+  /* Paragraph/Medium/Medium */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 145%; /* 20.3px */
 }
 
 .card {
@@ -49,8 +57,8 @@ line-height: 145%; /* 20.3px */
   border-radius: 8px;
   border: 0.5px solid var(--neutral-10, #ccc);
   background: #fff;
-  padding: 32px 10px 26px 24px;
   height: fit-content;
+  padding: 11px;
 }
 
 .btn-wrapper {
@@ -58,7 +66,7 @@ line-height: 145%; /* 20.3px */
 }
 
 .center {
-  row-gap: 16px;
+  row-gap: 8px;
 }
 
 #btn2 {
@@ -70,4 +78,74 @@ line-height: 145%; /* 20.3px */
   display: flex;
   flex-direction: column;
   row-gap: 24px;
+  flex: 1;
+}
+
+.title {
+  color: var(--neutral-50, #2a2a2a);
+  font-feature-settings: "cv04" on, "cv03" on;
+
+  /* Paragraph/Medium/Medium */
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 145%; /* 20.3px */
+}
+
+.meeting-link {
+  color: var(--neutral-40, #565656);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 14.4px */
+}
+
+.calender {
+  display: none;
+}
+
+/* Styles for tablets */
+@media (min-width: 620px) and (max-width: 1024px) {
+  /* Your CSS rules for tablet screens go here */
+  .mentor-name {
+    color: #008080;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .center {
+    row-gap: 16px;
+  }
+
+  .calender {
+    display: block;
+    flex: 1;
+  }
+}
+
+/* Styles for desktops */
+@media (min-width: 1025px) {
+  .mentor-name {
+    color: #008080;
+  }
+
+  .title {
+    font-size: 16px;
+  }
+
+  .center {
+    row-gap: 16px;
+  }
+
+  .card {
+    padding: 35.5px 10px 26px 24px;
+  }
+
+  .calender {
+    display: block;
+    flex: 1;
+  }
 }

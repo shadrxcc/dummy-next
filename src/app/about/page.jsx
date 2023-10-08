@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const About = () => {
   return (
-    <div className="p-8 bg-white border space-y-16">
+    <div className="p-[21px] sm:p-8 bg-white border space-y-16">
       <div className="space-y-4">
         <div className="flex items-center gap-x-2">
           <h1 className="text-3xl font-semibold text-[#2A2A2A]">
@@ -21,21 +21,21 @@ const About = () => {
         <h3 className="text-2xl font-semibold">Upcoming sessions</h3>
         <div className="flex">
           <UpcomingCard />
-          <Image src="/assets/Calendar.png" width={349} height={357} />
+          <Image className="calender" src="/assets/Calendar.png" width={349} height={357} />
         </div>
       </div>
       <div className="space-y-4">
         <div className="flex justify-between items-center">
-          <h3 className="text-2xl font-semibold">
+          <h3 className="text-sm sm:text-2xl font-semibold">
             Top mentors suggestion for you
           </h3>
-          <p className="text-lg font-medium">View All</p>
+          <p className="text-xs sm:text-lg font-medium">View All</p>
         </div>
 
-        <div className="flex gap-[48px] justify-between">
-          <Image src="/assets/mentor1.png" width={298} height={371} />
-          <Image src="/assets/mentor2.png" width={298} height={371} />
-          <Image src="/assets/mentor3.png" width={298} height={371} />
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-[48px] justify-between">
+          <Image className="w-full" src="/assets/mentor1.png" width={298} height={371} />
+          <Image className="w-full" src="/assets/mentor2.png" width={298} height={371} />
+          <Image className="w-full" src="/assets/mentor3.png" width={298} height={371} />
         </div>
       </div>
     </div>
